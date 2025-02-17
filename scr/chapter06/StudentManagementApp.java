@@ -110,7 +110,7 @@ public class StudentManagementApp {
 	// >> public static void main(String[] args) 형식이어야 만 실행 가능
 	// >> JVM은 main 메서드가 없을 경우 해당 파일을 실행 X
 	public static void main(String[] args) {
-		Student student1 = new Student(1, "이승아", 30, "슬립테크", 4.0);
+		Student student1 = new Student(1, "이승아", 30, "조민지", 4.0);
 //		Student student2 = new Student(2, "이도경", 31, "슬립테크", 3.1);
 //		Student student3 = new Student(3, "이지희", 20, "슬립테크", 4.2);
 //		Student student4 = new Student(4, "이지훈", 17, "슬립테크", 3.5);
@@ -121,7 +121,7 @@ public class StudentManagementApp {
 //		studentList.add(student4);
 		
 		// 학생 추가 
-		addStudent(1, "이승아", 30, "슬립테크", 4.0);
+		addStudent(1, "조민지", 30, "슬립테크", 4.0);
 		addStudent(2, "이도경", 31, "슬립테크", 3.1);
 		addStudent(3, "이지희", 20, "슬립테크", 4.2);
 		addStudent(4, "이지훈", 17, "슬립테크", 3.5);
