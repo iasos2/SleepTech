@@ -1,5 +1,7 @@
 package chapter12;
 
+import chapter12.view.BookView;
+
 // << 도서 관리 시스템 >>
 
 // 1. == 요구사항 분석 ==
@@ -20,5 +22,8 @@ package chapter12;
 //		- 사용자의 입력에 따라 적절한 Model 메서드 호출
 
 public class LibraryManagement {
-
+	public static void main(String[] args) {
+		BookView bookView = new BookView();
+		bookView.showMenu();	
+	}	
 }
