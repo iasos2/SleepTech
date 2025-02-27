@@ -1,5 +1,7 @@
 package user_reservation;
 
+import user_reservation.controller.ReservationController;
+
 /*
  * === 프로젝트 개요 ===
  * : 온라인 예약 시스템
@@ -26,12 +28,12 @@ package user_reservation;
  * service: UserService, ReservationService (interface)
  * >> implement: UserServiceImpl, ReservationServiceImpl
  * 
- * controller: UserController, ReservationController
+ * controller: ReservationController
  * repository: UserRepository, ReservationRespository
  * */
 public class Reservation {
 	public static void main(String[] args) {
-		
-		
+		ReservationController controller = new ReservationController();
+		controller.run();		
 	}
 }
