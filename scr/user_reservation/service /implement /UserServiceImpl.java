@@ -19,7 +19,14 @@ public class UserServiceImpl implements UserService {
 		
 		Optional<User> optionalUser = userRepository.findByUserId(userId);
 		
-		if (optionalUser.get() != null) {
+		// 옵셔널데이터.get()
+		// : Optional 내부의 데이터를 꺼내오는 메서드
+		// >> 데이터가 존재하지 않더라도(null) 반환
+		// >> 값이 존재하지 않을 때 NoSuchElementException 예외 발생
+		
+		// cf) .isPresent()
+		//		: 내부값 확인
+		if (optionalUser.isPresent()) {
 			System.out.println("해당 ID의 유저가 존재합니다. 다시 시도해주세요.");
 			return;
 		}
@@ -48,14 +55,19 @@ public class UserServiceImpl implements UserService {
 
 	@Override
 	public void logout() {
-		// TODO Auto-generated method stub
-		
+		if (loggedUser != null) {
+			// 로그인 중
+			System.out.println("로그아웃 성공: " + loggedUser.getName());
+			loggedUser = null;
+		} else {
+			System.out.println("로그인 상태가 아닙니다. 로그아웃할 수 없습니다.");
+		}
 	}
 
 	@Override
 	public boolean isLoggedIn() {
-		// TODO Auto-generated method stub
-		return false;
+		boolean result = loggedUser != null;
+		// 로그인 중: true / 로그인 중 X: false
+		return result;
 	}
-
 }
